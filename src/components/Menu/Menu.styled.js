@@ -12,9 +12,9 @@ export const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.2s ease-in-out;
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 
-
-  @media (max=width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
 
@@ -28,7 +28,7 @@ export const StyledMenu = styled.nav`
     text-decoration: none;
     transition: color 0.3s linear;
 
-    @media (max=width: ${({ theme }) => theme.mobile}) {
+    @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 1.5rem;
       text-align: center;
     }

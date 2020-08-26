@@ -5,7 +5,7 @@ import { StyledBurger } from './Burger.styled';
 
 const Burger = (props) => {
   return (
-    <StyledBurger onClick={() => props.toggleOpen()}>
+    <StyledBurger open={props.open} onClick={() => props.toggleOpen()}>
       <div />
       <div />
       <div />
@@ -15,6 +15,7 @@ const Burger = (props) => {
 
 Burger.propTypes = {
   toggleOpen: func.isRequired,
+  open: bool.isRequired,
 };
 
 export default Burger;

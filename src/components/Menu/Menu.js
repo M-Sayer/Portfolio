@@ -1,10 +1,12 @@
 import React from 'react';
+import { bool } from 'prop-types';
+
 import { StyledMenu } from './Menu.styled';
 
-const Menu = () => {
+const Menu = (props) => {
 
   return (
-    <StyledMenu>
+    <StyledMenu open={props.open}>
       <a href='/' aria-label='home'>
         home
       </a>
@@ -16,6 +18,10 @@ const Menu = () => {
       </a>
     </StyledMenu>
   )
+};
+
+Menu.propTypes = {
+  open: bool.isRequired,
 };
 
 export default Menu;

@@ -27,5 +27,14 @@ export const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+
+    :nth-child(2) {
+      opacity: ${({ open }) => open ? '1' : '1'};
+      transform: ${({ open }) => open ? 'translateX(10px)' : 'translateX(0)'};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+    }
   }
 `;
