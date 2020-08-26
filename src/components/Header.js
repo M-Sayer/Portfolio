@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import Menu from './Menu'
+import Menu from './Menu/Menu';
+import Burger from './Burger/Burger'
 
 const Header = () => {
 
   return (
    <header>
       <h1>muhajir</h1>
+      <Burger />
       <Menu />
    </header>
   )
