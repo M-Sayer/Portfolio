@@ -1,10 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { StyledMenu } from './Menu.styled';
 
 const Menu = () => {
 
   return (
-    <h1>menu</h1>
+    <StyledMenu>
+      <a href='/' aria-label='home'>
+        home
+      </a>
+      <a href='/' aria-label='about'>
+        about
+      </a>
+      <a href='/' aria-label='contact'>
+        contact
+      </a>
+    </StyledMenu>
   )
-}
+};
 
-export default Menu
+export default Menu;

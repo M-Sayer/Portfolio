@@ -8,8 +8,9 @@ body {
   padding: 0;
   align-items: center;
   background-color: #FFF;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
+  width: 100%;
 }
 
 code {
