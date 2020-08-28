@@ -4,4 +4,7 @@ header {
   background-color: #000;
   color: #FFF;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }

@@ -1,17 +1,21 @@
 import React from 'react'
+import './Main.css'
 
 const Main = () => {
 
   return (
-    <h1>main</h1>
     <section className='intro'>
-      <h2>salutations!</h2>
+     <div className='hero-image'>
+        <img src='./images/washingtonDC.jpg' />
+        <h2>
+        i'm muhajir, a full stack software developer.
+        </h2>
+     </div>
       <p>
-      i'm muhajir, a full stack software developer.
-      i build web applications using technologies such as React, Node.js, express.js and PostgreSQL, utilizing my experience from digital marketing and working with e-commerce brands to craft creative software solutions.
+      i build web applications, utilizing my experience from digital marketing and working with e-commerce brands to craft creative software solutions and user experiences that are easy to use.
       </p>
     </section>
-  )
+  );
 }
 
 export default Main

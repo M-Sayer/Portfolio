@@ -10,6 +10,7 @@ import { useClickOutside } from './utils/useClickOutside'
 
 import Menu from './components/Menu/Menu';
 import Burger from './components/Burger/Burger';
+import { Portfolio } from './components/Portolio'
 
 function App() {
 
@@ -26,13 +27,14 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
+        <Header />
         <div className="App">
-          <Header />
           <div ref={node}>
             <Burger open={open} toggleOpen={toggleOpen}/>
             <Menu open={open}/>
           </div>
           <Main />
+          <Portfolio />
         </div>
       </>
     </ThemeProvider>
