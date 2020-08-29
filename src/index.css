@@ -1,16 +1,15 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
   padding: 0;
   align-items: center;
   background-color: #FFF;
-  /* display: flex; */
-  justify-content: center;
-  width: 100%;
+  text-align: center;
+  width: 80%;
 }
 
 code {
@@ -23,3 +22,4 @@ code {
 
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
