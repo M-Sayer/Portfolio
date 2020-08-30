@@ -1,19 +1,20 @@
 import React from 'react';
 
 import { StyledHello } from './Hello.styled';
+import greetings from '../../utils/greetings';
 
-const Hello = () => {
+const Hello = (props) => {
+
+  
+  function renderGreetings() {
+    return greetings.map(greeting => (
+      <div>{greeting}</div>
+    ))
+  }
+
   return (
     <StyledHello>
-      <div>
-        hello
-      </div>
-      <div>
-        bonjour
-      </div>
-      <div>
-        hola
-      </div>
+     {renderGreetings()}
     </StyledHello>
   )
 }

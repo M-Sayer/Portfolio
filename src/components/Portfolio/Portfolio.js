@@ -1,31 +1,13 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { PortfolioTileStyled } from './PortfolioTile.styled';
-import { StyledLink, StyledButton } from '../utils/StyledComponents';
-import { Modal } from './Modal/Modal';
+import { StyledLink, StyledButton } from '../../utils/StyledComponents';
+import { Modal } from '../Modal/Modal';
+import projects from '../../utils/projects';
 
 export const Portfolio = () => {
-
-  const projects = [
-    {
-      title: 'CheffedIn',
-      image: './images/cheffedin.png',
-      link: 'https://cheffedin.vercel.app/',
-      git: 'https://github.com/M-Sayer/cheffedIn-Client',
-      description: 'social site',
-      stack: 'React, Node.js, express.js, PostgreSQL (PERN)',
-      readMore: 'extended description',
-    },
-    {
-      title: 'Bookmark App',
-      image: './images/bookmarkapp.png',
-      link: 'https://m-sayer.github.io/bookmarkApp/',
-      git: 'https://github.com/M-Sayer/bookmarkApp',
-      description: 'an app to save bookmarks',
-      stack: 'jQuery, JavaScript, HTML/CSS',
-      readMore: 'extended description',
-    },
-  ];
+  const history = useHistory();
 
   const [modal, setModal] = useState({ open: false });
 
@@ -41,9 +23,13 @@ export const Portfolio = () => {
     // render extended project description to pass as props to Modal component
     return (
       <section>
-        {content}
+        <p>{content}</p>
       </section>
     )
+  }
+
+  function handleClick(idx) {
+    history.push(`/projects/${idx}`)
   }
 
   function renderProjects(projects) {
@@ -53,26 +39,26 @@ export const Portfolio = () => {
         <h3>
           {project.title}
         </h3>
-        <p>
           {project.description}
-        </p>
         <p>
           stack: {project.stack}
         </p>
-        <StyledLink target='_blank' href={project.link} aria-label={project.title}>
-          view project
-        </StyledLink>
-        <StyledLink target='_blank' href={project.git} aria-label='git-hub-link'>
-          view code
-        </StyledLink>
-        <StyledButton id={project.title}
+        <div className='project-links'>
+          <StyledLink target='_blank' href={project.link} aria-label={project.title}>
+            view project
+          </StyledLink>
+          <StyledLink target='_blank' href={project.git} aria-label='git-hub-link'>
+            view code
+          </StyledLink>
+        </div>
+        <StyledButton primary id={project.title}
         //set state to project id to trigger modal with correct content
-          onClick={(e) => openModal(e)}>
+          onClick={() => handleClick(idx)}>
           read more
         </StyledButton>
         {modal.open === project.title && 
           // render modal with content from project
-          <Modal content={renderReadMore(project.readMore)}
+          <Modal content={project.readMore}
             closeModal={() => setModal({ open: false })}/>}
       </PortfolioTileStyled>
     ))

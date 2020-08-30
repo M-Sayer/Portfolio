@@ -10,6 +10,12 @@
   padding-bottom: 50px;
 }
 
+.bio-short {
+  width: 80%;
+  margin-left: 10%;
+  text-align: justify;
+}
+
 .typewriter-container {
   overflow: hidden;
   width: 100%;

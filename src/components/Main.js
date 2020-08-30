@@ -5,15 +5,6 @@ import Hello from './Hello/Hello';
 
 const Main = () => {
 
-  const [greeting, setGreeting] = useState('hello')
-
-  const greetings = ['hello', 'bonjour', 'hola',];
-
-  setInterval(() => {
-    let random = Math.floor(Math.random() * greetings.length);
-    setGreeting(greetings[random])
-  }, 2000)
-
   return (
     <div className='main'>
       <div className='greeting'>
@@ -26,10 +17,10 @@ const Main = () => {
           a full stack software developer.
           </div>
         </div>
-      </div>
+      </div> 
       <div className='bio-short'>
-       <p>
-       i build web applications, utilizing my experience from digital marketing and working with e-commerce brands to craft creative software solutions and user experiences that are easy to use.
+        <p>
+       i build things (mostly on the internet) and solve problems (mostly in real life). usually i'm training martial arts, rock climbing, or eating copious amounts of ice cream. but i'm always learning something new. 
        </p>
      </div>
     </div>

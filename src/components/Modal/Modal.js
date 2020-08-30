@@ -9,7 +9,7 @@ export const Modal = (props) => {
       class='material-icons md-light'>
         highlight_off
       </span>
-      {props.content}
+      <section><p>{props.content}</p></section>
     </ModalStyled>
   )
 }

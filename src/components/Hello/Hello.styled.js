@@ -2,9 +2,9 @@ import styled, { keyframes } from 'styled-components';
 
 const rotateWords = keyframes`
   8% { opacity: 1; height: 80px; }
-  19% { opacity: 1; height: 80px;}
-  25% { opacity: 0; height: 80px;}
-  100% {opacity: 0;}
+  19% { opacity: 1; height: 80px; }
+  25% { opacity: 0; height: 80px; }
+  100% { opacity: 0; }
 `
 
 export const StyledHello = styled.div`
@@ -29,6 +29,4 @@ div {
     animation-delay: 6s;
   }
 }
-
-
 `

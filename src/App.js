@@ -1,25 +1,29 @@
 import React, { useState, useRef } from 'react';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
 
-import Header from './components/Header';
-import Main from './components/Main';
+import './App.css';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './global';
 import { theme } from './theme';
 import { useClickOutside } from './utils/useClickOutside'
 
+import Header from './components/Header';
+import Main from './components/Main';
 import Menu from './components/Menu/Menu';
 import Burger from './components/Burger/Burger';
-import { Portfolio } from './components/Portolio'
+import { Portfolio } from './components/Portfolio/Portfolio';
+import Project from './components/Portfolio/Project';
 
 function App() {
 
+  // hamburger menu state
   const [open, setOpen] = useState(false);
-
+  
   function toggleOpen() {
     return setOpen(!open);
   };
 
+  // close menu if you click outside menu (desktop)
   const node = useRef();
   useClickOutside(node, () => setOpen(false));
 
@@ -33,8 +37,18 @@ function App() {
             <Burger open={open} toggleOpen={toggleOpen}/>
             <Menu open={open}/>
           </div>
-          <Main />
-          <Portfolio />
+          <Switch>
+            <Route exact path='/' 
+              render={props => 
+                <div>
+                  <Main />
+                  <Portfolio />
+                </div>
+              }
+            />
+            <Route path='/projects/:id' component={Project}
+            />
+          </Switch>
         </div>
       </>
     </ThemeProvider>
