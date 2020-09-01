@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import './Portfolio.css'
 
 import { PortfolioTileStyled } from './PortfolioTile.styled';
 import { StyledLink, StyledButton } from '../../utils/StyledComponents';
@@ -65,7 +66,7 @@ export const Portfolio = () => {
   }
 
   return (
-    <section className='Portfolio'>
+    <section className='portfolio'>
       <h2>my projects</h2>
       {renderProjects(projects)}
     </section>

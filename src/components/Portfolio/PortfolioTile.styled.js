@@ -4,11 +4,11 @@ export const PortfolioTileStyled = styled.section`
 
 background: #212121;
 color: #FFF;
-padding: 25px 0;
+padding: 50px 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-border-top: 1px solid white;
+border-bottom: 2px solid #484848;
 
 img {
   width: 80%;
@@ -18,7 +18,7 @@ img {
 }
 
 button {
-  margin: 25px 0;
+  margin-top: 25px;
 }
 
 
