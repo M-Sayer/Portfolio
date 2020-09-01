@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { bool } from 'prop-types';
 
 import { StyledMenu } from './Menu.styled';
@@ -7,15 +8,15 @@ const Menu = (props) => {
 
   return (
     <StyledMenu open={props.open}>
-      <a href='/' aria-label='home'>
+      <NavLink onClick={() => props.toggleOpen()} to='/' aria-label='home'>
         home
-      </a>
-      <a href='/' aria-label='about'>
+      </NavLink>
+      <NavLink onClick={() => props.toggleOpen()} to='/about' aria-label='about'>
         about
-      </a>
-      <a href='/' aria-label='contact'>
+      </NavLink>
+      <NavLink onClick={() => props.toggleOpen()} to='/contact' aria-label='contact'>
         contact
-      </a>
+      </NavLink>
     </StyledMenu>
   )
 };

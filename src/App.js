@@ -35,7 +35,7 @@ function App() {
         <div className="App">
           <div ref={node}>
             <Burger open={open} toggleOpen={toggleOpen}/>
-            <Menu open={open}/>
+            <Menu toggleOpen={toggleOpen} open={open}/>
           </div>
           <Switch>
             <Route exact path='/' 
