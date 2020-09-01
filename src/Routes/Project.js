@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import projects from '../../utils/projects';
+import projects from '../utils/projects';
 import './Project.css';
 
 const Project = () => {

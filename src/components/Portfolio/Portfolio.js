@@ -7,7 +7,7 @@ import { StyledLink, StyledButton } from '../../utils/StyledComponents';
 import { Modal } from '../Modal/Modal';
 import projects from '../../utils/projects';
 
-export const Portfolio = () => {
+const Portfolio = () => {
   const history = useHistory();
 
   const [modal, setModal] = useState({ open: false });
@@ -72,3 +72,5 @@ export const Portfolio = () => {
     </section>
   )
 }
+
+export default Portfolio;

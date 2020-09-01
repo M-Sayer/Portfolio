@@ -8,11 +8,11 @@ import { theme } from './theme';
 import { useClickOutside } from './utils/useClickOutside'
 
 import Header from './components/Header';
-import Main from './components/Main';
 import Menu from './components/Menu/Menu';
 import Burger from './components/Burger/Burger';
-import { Portfolio } from './components/Portfolio/Portfolio';
-import Project from './components/Portfolio/Project';
+import Home from './Routes/Home';
+import About from './Routes/About';
+import Project from './Routes/Project';
 
 function App() {
 
@@ -38,14 +38,8 @@ function App() {
             <Menu toggleOpen={toggleOpen} open={open}/>
           </div>
           <Switch>
-            <Route exact path='/' 
-              render={props => 
-                <div>
-                  <Main />
-                  <Portfolio />
-                </div>
-              }
-            />
+            <Route exact path='/' component={Home} />
+            <Route path='/about' component={About} />
             <Route path='/projects/:id' component={Project}
             />
           </Switch>
