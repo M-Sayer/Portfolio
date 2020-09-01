@@ -1,0 +1,18 @@
+.projectContainer {
+  background-color: #212121;
+  color: #FFF;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: justify;
+}
+
+.projectContainer section {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.projectContainer h2 {
+  margin-top: 0;
+  color: #FFF;
+  text-align: center;
+}

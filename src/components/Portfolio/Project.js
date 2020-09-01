@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import projects from '../../utils/projects';
+import './Project.css';
 
 const Project = () => {
 
@@ -9,8 +10,9 @@ const Project = () => {
 
   function generateProject() {
     return (
-      <div>
-        {projects[id].title}
+      <div className='projectContainer'>
+        <h2>{projects[id].title}</h2>
+        <section>{projects[id].readMore}</section>
       </div>
     )
   }
