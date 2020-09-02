@@ -1,0 +1,15 @@
+.about {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.about img {
+  border-radius: 50%;
+  width: 80%;
+  padding: 10px 0;
+}

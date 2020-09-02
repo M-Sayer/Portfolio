@@ -12,6 +12,7 @@ import Menu from './components/Menu/Menu';
 import Burger from './components/Burger/Burger';
 import Home from './Routes/Home';
 import About from './Routes/About';
+import Contact from './Routes/Contact';
 import Project from './Routes/Project';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
             <Route path='/projects/:id' component={Project}
             />
           </Switch>

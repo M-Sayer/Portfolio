@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './Portfolio.css'
 
 import { PortfolioTileStyled } from './PortfolioTile.styled';
-import { StyledLink, StyledButton } from '../../utils/StyledComponents';
+import { StyledLink, StyledButton } from '../StyledComponents';
 import { Modal } from '../Modal/Modal';
 import projects from '../../utils/projects';
 
