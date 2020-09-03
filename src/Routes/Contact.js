@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 
@@ -6,10 +7,17 @@ import './Contact.css'
 import { StyledButton } from '../components/StyledComponents';
 
 const Contact = () => {
+  const history = useHistory();
 
   function handleSubmit(values) {
-    console.log(values)
+    fetch('https://formspree.io/mbjzvebw', {
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify(values)
+    })
 
+    history.push('/success')
+    console.log('history pushed?')
   }
 
   function autoExpand(e) {
@@ -37,9 +45,7 @@ const Contact = () => {
           email: yup.string().email().required('hmm, are you sure that is your email address?'),
           message: yup.string().max(250).required('kindly leave a message'),
         })}
-        onSubmit={ (values) => {
-          handleSubmit(values)
-        }}
+        onSubmit={ (values) => handleSubmit(values)}
       >
         {({ errors, touched }) => (
           <Form className='contactForm'>
