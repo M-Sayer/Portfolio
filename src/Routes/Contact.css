@@ -11,11 +11,13 @@
   align-items: center;
   text-align: center;
   width: 80%;
+  max-height: 100vh;
 }
 
 
 .contact button {
   width: 100%;
+
 }
 
 .contact input, .contact textarea {
@@ -34,4 +36,9 @@
 .errorMessage {
   color: red;
   font-size: 14px;
+}
+
+.contact textarea {
+  overflow-x: hidden;
+  resize: none;
 }

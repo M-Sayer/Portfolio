@@ -20,7 +20,7 @@ const Contact = () => {
   const expandingTextarea = (props) => (
     <textarea {...props} type='text' onChange={(e) => {
       props.onChange(e);
-      autoExpand(e)
+      autoExpand(e);
     }} />
   );
 
@@ -35,7 +35,7 @@ const Contact = () => {
         validationSchema={yup.object({
           name: yup.string().required('kindly enter your name'),
           email: yup.string().email().required('hmm, are you sure that is your email address?'),
-          message: yup.string().max(5).required('kindly leave a message'),
+          message: yup.string().max(250).required('kindly leave a message'),
         })}
         onSubmit={ (values) => {
           handleSubmit(values)
@@ -47,10 +47,11 @@ const Contact = () => {
             <Field placeholder='name' name='name' type='text' />
             <ErrorMessage component='section' className='errorMessage' name='email' />
             <Field placeholder='email' name='email' type='text' />
-            {/* if message field surpasses 5 (fails validation)
-                render error w/o having to click out of field or submit
-             */}
-            <ErrorMessage component='section' className='errorMessage' name='message' />
+            {errors.message && 
+              <div className='errorMessage'>
+                {errors.message}
+              </div>
+            }
             <Field name='message' as={expandingTextarea} placeholder='message' />
             <StyledButton primary type='submit'>Submit</StyledButton>
           </Form>
