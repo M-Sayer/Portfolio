@@ -9,7 +9,20 @@ const Contact = () => {
 
   function handleSubmit(values) {
     console.log(values)
+
   }
+
+  function autoExpand(e) {
+    e.target.style.height = 'auto';
+    e.target.style.height = e.target.scrollHeight + 'px';
+  }
+
+  const expandingTextarea = (props) => (
+    <textarea {...props} type='text' onChange={(e) => {
+      props.onChange(e);
+      autoExpand(e)
+    }} />
+  );
 
   function renderContactForm() {
     return (
@@ -20,21 +33,21 @@ const Contact = () => {
           message: '',
         }}
         validationSchema={yup.object({
-          name: yup.string().required('Required'),
-          email: yup.string().email('Invalid email address').required('Required'),
-          message: yup.string().required('Required'),
+          name: yup.string().required('kindly enter your name'),
+          email: yup.string().email().required('hmm, are you sure that is your email address?'),
+          message: yup.string().required('kindly leave a message'),
         })}
         onSubmit={ (values) => {
           handleSubmit(values)
         }}
       >
         <Form className='contactForm'>
+            <ErrorMessage component='section' className='errorMessage' name='name' />
             <Field placeholder='name' name='name' type='text' />
-            <ErrorMessage className='error-message' name='name' />
+            <ErrorMessage component='section' className='errorMessage' name='email' />
             <Field placeholder='email' name='email' type='text' />
-            <ErrorMessage className='error-message' name='email' />
-            <Field placeholder='message' name='message' type='text' />
-            <ErrorMessage className='error-message' name='message' />
+            <ErrorMessage component='section' className='errorMessage' name='message' />
+            <Field name='message' as={expandingTextarea} placeholder='message' />
             <StyledButton primary type='submit'>Submit</StyledButton>
         </Form>
       </Formik>
@@ -43,6 +56,7 @@ const Contact = () => {
 
   return (
     <div className='contact'>
+      <h1>contact me</h1>
       {renderContactForm()}
     </div>
   )
