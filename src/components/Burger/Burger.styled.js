@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 
 export const StyledBurger = styled.button`
-  position: fixed;
-  top: 5%;
-  left: 1rem;
+  position: relative;
+  // top: 6.5%;
+  // left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  margin-left: 15px;
 
   &:focus {
     outline: none;
@@ -21,7 +22,7 @@ export const StyledBurger = styled.button`
 
   div {
     width: 2rem;
-    height: 0.25rem;
+    height: 0.2rem;
     background: #FFF;
     border-radius: 10px;
     transition: all 0.3s linear;
