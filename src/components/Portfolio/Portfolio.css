@@ -2,3 +2,18 @@
   margin-bottom: 15px;
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  
+  .portfolio h2 {
+    margin-bottom: 30px;
+  }
+  
+  .projects {
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 25px;
+  }
+}

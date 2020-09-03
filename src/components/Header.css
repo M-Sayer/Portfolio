@@ -23,10 +23,9 @@ header section {
 }
 
 .socialIcons {
-  margin-right: 10px;
   flex: 1;
 }
 
 .social-icon {
-  margin: 5px;
+  margin: 5%;
 }

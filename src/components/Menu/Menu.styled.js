@@ -13,9 +13,10 @@ export const StyledMenu = styled.nav`
   transition: transform 0.2s ease-in-out;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   z-index: 9;
+  width: 100%;
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
+  @media (min-width: ${({ theme }) => theme.desktop}) {
+     width: 40%;
   }
 
   a {
@@ -27,10 +28,11 @@ export const StyledMenu = styled.nav`
     color: #FFF;
     text-decoration: none;
     transition: color 0.3s linear;
+    font-size: 1.5rem;
+    text-align: center;
 
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
+    @media (min-width: ${({ theme }) => theme.desktop}) {
+     
     }
 
     &:hover {

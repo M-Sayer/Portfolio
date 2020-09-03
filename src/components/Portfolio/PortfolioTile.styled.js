@@ -8,12 +8,12 @@ padding: 25px 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-// border-bottom: 2px solid #484848;
 text-align: center;
 width: 80%;
 margin-left: 10%;
 border-radius: 3px;
 margin-bottom: 5px;
+position: relative;
 
 img {
   width: 80%;
@@ -24,6 +24,18 @@ img {
 
 button {
   margin-top: 25px;
+
+  @media (min-width: ${({ theme }) => theme.desktop}) {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+ }
+}
+
+@media (min-width: ${({ theme }) => theme.desktop}) {
+  .project-links {
+    margin-bottom: 40px;
+  }
 }
 
 

@@ -4,30 +4,10 @@ import './Portfolio.css'
 
 import { PortfolioTileStyled } from './PortfolioTile.styled';
 import { StyledLink, StyledButton } from '../StyledComponents';
-import { Modal } from '../Modal/Modal';
 import projects from '../../utils/projects';
 
 const Portfolio = () => {
   const history = useHistory();
-
-  const [modal, setModal] = useState({ open: false });
-
-  function openModal(e) {
-    //set state to project id to trigger corresponding modal
-    e.preventDefault()
-    setModal({
-      open: e.target.id
-    })
-  } 
-
-  function renderReadMore(content) {
-    // render extended project description to pass as props to Modal component
-    return (
-      <section>
-        <p>{content}</p>
-      </section>
-    )
-  }
 
   function handleClick(idx) {
     history.push(`/projects/${idx}`)
@@ -53,14 +33,9 @@ const Portfolio = () => {
           </StyledLink>
         </div>
         <StyledButton primary id={project.title}
-        //set state to project id to trigger modal with correct content
           onClick={() => handleClick(idx)}>
           read more
         </StyledButton>
-        {modal.open === project.title && 
-          // render modal with content from project
-          <Modal content={project.readMore}
-            closeModal={() => setModal({ open: false })}/>}
       </PortfolioTileStyled>
     ))
   }
@@ -68,7 +43,9 @@ const Portfolio = () => {
   return (
     <section className='portfolio'>
       <h2>my projects</h2>
-      {renderProjects(projects)}
+      <div className='projects'>
+        {renderProjects(projects)}
+      </div>
     </section>
   )
 }

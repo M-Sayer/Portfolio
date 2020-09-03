@@ -59,7 +59,7 @@ const Contact = () => {
               </div>
             }
             <Field name='message' as={expandingTextarea} placeholder='message' />
-            <StyledButton primary type='submit'>Submit</StyledButton>
+            <StyledButton primary lightHover type='submit'>Submit</StyledButton>
           </Form>
         )}
       </Formik>
