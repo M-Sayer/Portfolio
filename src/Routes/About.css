@@ -10,6 +10,12 @@
 
 .about img {
   border-radius: 50%;
-  width: 80%;
+  width: 60%;
   padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .about img {
+    width: 25%;
+  }
 }
