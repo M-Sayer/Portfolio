@@ -3,7 +3,7 @@ import React from 'react';
 import { StyledHello } from './Hello.styled';
 import greetings from '../../utils/greetings';
 
-const Hello = (props) => {
+const Hello = () => {
 
   
   function renderGreetings() {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import './Portfolio.css'
 
@@ -32,8 +32,7 @@ const Portfolio = () => {
             view code
           </StyledLink>
         </div>
-        <StyledButton primary id={project.title}
-          onClick={() => handleClick(idx)}>
+        <StyledButton primary id={project.title} onClick={() => handleClick(idx)}>
           read more
         </StyledButton>
       </PortfolioTileStyled>

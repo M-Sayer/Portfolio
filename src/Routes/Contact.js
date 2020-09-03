@@ -20,11 +20,13 @@ const Contact = () => {
     console.log('history pushed?')
   }
 
+  //auto expand text area box in form
   function autoExpand(e) {
     e.target.style.height = 'auto';
     e.target.style.height = e.target.scrollHeight + 'px';
   }
 
+  //custom textarea for Formik
   const expandingTextarea = (props) => (
     <textarea {...props} type='text' onChange={(e) => {
       props.onChange(e);
