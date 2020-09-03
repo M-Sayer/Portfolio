@@ -9,6 +9,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 border-bottom: 2px solid #484848;
+text-align: center;
 
 img {
   width: 80%;

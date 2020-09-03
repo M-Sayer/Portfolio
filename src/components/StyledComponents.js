@@ -6,7 +6,7 @@ color: ${props => props.primary ? '#FFF' : '#000'};
 border: none;
 border-radius: 3px;
 padding: 3px;
-// width: 8rem;
+width: 8rem;
 height: 2rem;
 text-align: center;
 `
