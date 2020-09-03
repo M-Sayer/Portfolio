@@ -14,13 +14,13 @@ const Main = () => {
             i'm muhajir,
           </div>
           <div className='typewriter-text'>
-          a full stack software developer.
+          a full-stack software developer.
           </div>
         </div>
       </div> 
       <div className='bio-short'>
         <p>
-       i build things (mostly on the internet) and solve problems (mostly in real life). usually i'm training martial arts, rock climbing, or eating copious amounts of ice cream. but i'm always learning something new. 
+       i build things (mostly on the internet) and solve problems (mostly in real life). usually, i'm training martial arts, rock climbing, or eating copious amounts of ice cream. but i'm always learning something new. 
        </p>
      </div>
     </div>

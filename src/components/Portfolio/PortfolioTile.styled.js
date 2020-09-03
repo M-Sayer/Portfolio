@@ -2,14 +2,18 @@ import styled from 'styled-components';
 
 export const PortfolioTileStyled = styled.section`
 
-background: #212121;
+background: #484848;
 color: #FFF;
-padding: 50px 0;
+padding: 25px 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-border-bottom: 2px solid #484848;
+// border-bottom: 2px solid #484848;
 text-align: center;
+width: 80%;
+margin-left: 10%;
+border-radius: 3px;
+margin-bottom: 5px;
 
 img {
   width: 80%;

@@ -59,7 +59,7 @@
   white-space: nowrap;
 
   animation: typewriter-text 4s steps(44) 3s 1 normal both,
-              blinkCursor 400ms steps(44) 3s infinite normal;
+              blinkCursor 400ms steps(44) 3s 8 normal;
      
 }
 
@@ -69,17 +69,18 @@
   }
 
   to {
-    width: 80%;
+    width: 100%;
   }
 }
 
 @keyframes blinkCursor {
   from {
-    border-right-color: transparent;
+    border-right-color: rgba(255, 255, 255, 0.76);
   }
 
   to {
-    border-right-color: rgba(255, 255, 255, 0.76);
+    
+    border-right-color: transparent;
   }
 }
 
@@ -105,7 +106,7 @@
     align-items: center;
   }
 
-  .typewriter-text {
+  /* .typewriter-text {
     overflow: hidden;
     position: relative;
     width: 18em;
@@ -115,7 +116,7 @@
     animation: typewriter 4s steps(44) 1s 1 normal both,
                 blinkCursor 400ms steps(44) infinite normal;
        
-  }
+  } */
 
   
 
