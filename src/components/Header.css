@@ -28,3 +28,13 @@ header section {
 .social-icon {
   margin: 5%;
 }
+
+@media (min-width: 768px) {
+  .social-icon {
+    transition: transform 1s;
+  }
+
+  .social-icon:hover{
+    transform: translateY(-10px)
+  }
+}

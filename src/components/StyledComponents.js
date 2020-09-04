@@ -29,4 +29,8 @@ transition: background 0.8s;
 export const StyledLink = styled.a`
   color: #FFF;
   margin: 5px 10px;
+
+  &:hover {
+    color: #212121;
+    cursor: pointer;
 `
