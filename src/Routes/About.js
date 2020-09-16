@@ -8,6 +8,7 @@ const About = () => {
   return (
     <div className='about'>
       <img src={smImg} srcSet={`${smImg} 300w, ${lgImg} 768w`} alt='bio-pic' />
+      <p className='caption'>rock-climbing in New Mexico</p>
       <p>
         greetings and salutations! my name is muhajir, and i'm so glad you're here. i really enjoy meeting new folks. people always have such interesting stories to tell. here is mine...
       </p>

@@ -1,13 +1,5 @@
 .greeting {
-  background: #212121;
-  color: #FFF;
   text-align: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 50px;
 }
 
 .bio-short {
@@ -18,95 +10,6 @@
   border-bottom: 2px solid #484848;
 }
 
-.typewriter-container {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.typewriter-name {
-  overflow: hidden;
-  position: relative;
-  width: 80%;
-  border-right: 2px solid transparent;
-  white-space: nowrap;
-
-  animation: typewriter-name 2s steps(22) 1s 1 normal both,
-              blinkCursor 400ms steps(44) 1s 5 normal;
-     
-}
-
-@keyframes typewriter-name {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 35%;
-  }
-}
-
-.typewriter-text {
-  overflow: hidden;
-  position: relative;
-  width: 80%;
-  border-right: 2px solid transparent;
-  white-space: nowrap;
-
-  animation: typewriter-text 4s steps(44) 3s 1 normal both,
-              blinkCursor 400ms steps(44) 3s 8 normal;
-     
-}
-
-@keyframes typewriter-text {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blinkCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.76);
-  }
-
-  to {
-    border-right-color: transparent;
-  }
-}
-
-
 @media (min-width: 768px) {
-
-  .typewriter-name {
-    animation: typewriter-name 4s steps(44) 1s 1 normal both,
-                blinkCursor 400ms steps(44) 1s 3 normal;
-       
-  }
-
-  .typewriter-text {  
-    animation: typewriter-text 8s steps(100) 2.5s 1 normal both,
-                blinkCursor 400ms steps(44) 2.5s 6 normal;
-       
-  }
-
-
-  /* 
-  animation-name: typewriter;
-  animation-duration: 4s;
-  animation-timing-function: steps(44);
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both; 
-  */
 
 }

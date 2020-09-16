@@ -1,6 +1,7 @@
 import React, {useState, useRef } from 'react';
 import './Header.css';
 import { SocialIcon } from 'react-social-icons';
+import { Linkedin, GitHub } from 'react-feather';
 
 import Menu from './Menu/Menu';
 import Burger from './Burger/Burger';
@@ -27,14 +28,18 @@ const Header = () => {
       </section>
       <h3>muhajir</h3>
       <div className='socialIcons'>
-        <SocialIcon style={{ height: 25, width: 25 }}
-        bgColor='#FFF'
-        url='https://www.linkedin.com/in/muhajir-sayer/' 
-        target='_blank' />    
-        <SocialIcon style={{ height: 25, width: 25 }}
-        bgColor='#FFF'
-        url='https://github.com/M-Sayer' 
-        target='_blank' />
+        <a target='_blank' 
+          href='https://www.linkedin.com/in/muhajir-sayer/' 
+          className='socialIcon'
+        >
+          <Linkedin />
+        </a>
+        <a target='_blank'
+          href='https://github.com/M-Sayer' 
+          className='socialIcon'
+        >
+          <GitHub />
+        </a>
       </div>
    </header>
   )

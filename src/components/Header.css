@@ -27,12 +27,24 @@ header section {
   justify-content: space-evenly;
 }
 
+.socialIcon {
+  height: 80%;
+}
+.socialIcon:visited {
+  color: #FFF;
+}
+
 @media (min-width: 768px) {
-  .social-icon {
-    transition: transform 1s;
+  .socialIcons {
+    justify-content: center;
   }
 
-  .social-icon:hover{
-    transform: translateY(-10px)
+  .socialIcon {
+    transition: transform 1s;
+    margin-right: 5%;
+  }
+
+  .socialIcon:hover{
+    transform: translateY(-10px);
   }
 }
