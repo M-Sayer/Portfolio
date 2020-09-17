@@ -29,6 +29,7 @@ header section {
 
 .socialIcon {
   height: 80%;
+  color: #FFF;
 }
 .socialIcon:visited {
   color: #FFF;
