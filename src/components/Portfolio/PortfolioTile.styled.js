@@ -18,7 +18,7 @@ position: relative;
 img {
   width: 80%;
   height: 200px;
-  object-fit: co;
+  object-fit: contain;
   border-radius: 5px;
 }
 
@@ -40,8 +40,7 @@ button {
   img {
     width: 80%;
     height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
+    object-fit: contain;
   }
 }
 
