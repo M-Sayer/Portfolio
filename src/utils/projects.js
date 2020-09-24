@@ -19,6 +19,20 @@ const projects = [
     </>,
   },
   {
+    title: 'JotDown',
+    image: './images/jotdown_sm.png',
+    link: 'https://expo.io/@sayer/jotdown',
+    git: 'https://github.com/M-Sayer/jotdown',
+    description: 'a react native mobile app for notetaking',
+    stack: 'React Native, Firebase',
+    readMore: 
+      <>
+        <p>
+          this is a personal project that i am actively building. to view the project on your mobile phone, install the <a href='https://expo.io/tools#client' target='_blank'>expo client app</a> and then click the <a href='https://expo.io/@sayer/jotdown' target='_blank'>project link</a>. initially, i began this project to learn react native for mobile devolopment, and to reinforce my previous learning of Google Firebase. i began with a simple notetaking app, building out CRUD functionality. then i implemented an iPhone notes style interface, where the user can simply tap anywhere on the note to begin editing. once a user begins editing, buttons to cancel or save render under the note. if a user cancels, the note will revert to its previous state. if the user saves, the new information will be stored in Firebase. Users can also currently swipe left on a note in the dashboard list view to render a delete button and delete a note. though it is quite simple now, my plan is to implement markdown style editing for more intuitive formatting while notetaking on mobile devices. Check back later to see how this project is coming along!
+        </p>
+      </>
+  },
+  {
     title: 'Bookmark App',
     image: './images/bookmarkapp.png',
     link: 'https://m-sayer.github.io/bookmarkApp/',

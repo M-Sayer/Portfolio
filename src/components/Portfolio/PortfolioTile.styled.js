@@ -18,7 +18,7 @@ position: relative;
 img {
   width: 80%;
   height: 200px;
-  object-fit: cover;
+  object-fit: co;
   border-radius: 5px;
 }
 
@@ -35,6 +35,13 @@ button {
 @media (min-width: ${({ theme }) => theme.desktop}) {
   .project-links {
     margin-bottom: 40px;
+  }
+
+  img {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
   }
 }
 

@@ -16,3 +16,14 @@
   color: #FFF;
   text-align: center;
 }
+
+.projectContainer a:visited {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .projectContainer {
+    width: 60%;
+    margin-left: 20%;
+  }
+}

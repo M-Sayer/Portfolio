@@ -25,4 +25,9 @@
     width: 40%;
     margin-bottom: 50px;
   }
+
+  .about {
+    width: 60%;
+    margin-left: 20%;
+  }
 }
