@@ -23,7 +23,7 @@ const projects = [
     image: './images/jotdown_sm.png',
     link: 'https://expo.io/@sayer/jotdown',
     git: 'https://github.com/M-Sayer/jotdown',
-    description: 'a react native mobile app for notetaking',
+    description: 'a react native mobile app for notetaking. to view the project on your mobile phone, install the expo client app and then click theproject link',
     stack: 'React Native, Firebase',
     readMore: 
       <>
