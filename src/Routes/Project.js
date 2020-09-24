@@ -11,6 +11,7 @@ const Project = () => {
   function generateProject() {
     return (
       <div className='projectContainer'>
+        <img src={projects[id].image} alt={projects[id].title} />
         <h2>{projects[id].title}</h2>
         <section>{projects[id].readMore}</section>
       </div>

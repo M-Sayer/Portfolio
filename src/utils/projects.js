@@ -3,7 +3,7 @@ import React from 'react';
 const projects = [
   {
     title: 'CheffedIn',
-    image: './images/cheffedin.png',
+    image: '/images/cheffedin.png',
     link: 'https://cheffedin.vercel.app/',
     git: 'https://github.com/M-Sayer/cheffedIn-Client',
     description: 'a social site for recipe sharing & management',
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: 'JotDown',
-    image: './images/jotdown_sm.png',
+    image: '/images/jotdown_sm.png',
     link: 'https://expo.io/@sayer/jotdown',
     git: 'https://github.com/M-Sayer/jotdown',
     description: 'a react native mobile app for notetaking. to view the project on your mobile phone, install the expo client app and then click theproject link',
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     title: 'Bookmark App',
-    image: './images/bookmarkapp.png',
+    image: '/images/bookmarkapp.png',
     link: 'https://m-sayer.github.io/bookmarkApp/',
     git: 'https://github.com/M-Sayer/bookmarkApp',
     description: 'an app to save bookmarks',
